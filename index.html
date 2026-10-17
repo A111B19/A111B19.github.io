@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nocturne — Work in flow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Space background: starfield -->
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#" class="logo">
+        <span class="logo__mark"></span>
+        Nocturne
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#" class="btn btn--ghost nav__login">Log in</a>
+        <a href="#" class="btn btn--primary">Get started</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="horizon" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <span class="badge reveal">✦ New: AI-powered focus sessions</span>
+        <h1 class="hero__title reveal">
+          Your work, organized<br />
+          for <span class="gradient-text" id="typed">deep focus</span><span class="cursor">|</span>
+        </h1>
+        <p class="hero__subtitle reveal">
+          Nocturne brings your tasks, notes and team together in one calm,
+          distraction-free workspace — built for people who do their best work after dark.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#" class="btn btn--primary btn--lg">Start for free</a>
+          <a href="#how" class="btn btn--ghost btn--lg">See how it works →</a>
+        </div>
+
+        <!-- App preview -->
+        <div class="preview reveal">
+          <div class="preview__bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="preview__body">
+            <aside class="preview__sidebar">
+              <div class="sk sk--title"></div>
+              <div class="sk sk--item active"></div>
+              <div class="sk sk--item"></div>
+              <div class="sk sk--item"></div>
+              <div class="sk sk--item"></div>
+            </aside>
+            <div class="preview__content">
+              <div class="preview__stats">
+                <div class="stat"><small>Tasks done</small><strong data-count="128">0</strong></div>
+                <div class="stat"><small>Focus hours</small><strong data-count="42">0</strong></div>
+                <div class="stat"><small>Streak</small><strong data-count="17">0</strong></div>
+              </div>
+              <div class="preview__chart">
+                <div style="--h:40%"></div><div style="--h:65%"></div><div style="--h:50%"></div>
+                <div style="--h:80%"></div><div style="--h:60%"></div><div style="--h:95%"></div>
+                <div style="--h:70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Everything you need, nothing you don't</h2>
+          <p>Thoughtful tools designed to keep you in the zone.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card reveal">
+            <div class="card__icon">⚡</div>
+            <h3>Lightning fast</h3>
+            <p>Keyboard-first navigation and instant search across everything you own.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">🌙</div>
+            <h3>Easy on the eyes</h3>
+            <p>A carefully tuned dark interface that stays comfortable during long sessions.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">🔒</div>
+            <h3>Private by default</h3>
+            <p>End-to-end encryption for your notes, with full control over what you share.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">🤝</div>
+            <h3>Built for teams</h3>
+            <p>Shared boards, live comments and clear ownership without the noise.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">📊</div>
+            <h3>Insightful stats</h3>
+            <p>See where your time really goes and build habits that stick.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">🔌</div>
+            <h3>Integrations</h3>
+            <p>Connect the calendar, chat and code tools you already use every day.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Up and running in minutes</h2>
+          <p>Three steps between you and a calmer workday.</p>
+        </div>
+        <ol class="steps">
+          <li class="reveal"><span>1</span><h3>Create your space</h3><p>Sign up and pick a template that fits how you work.</p></li>
+          <li class="reveal"><span>2</span><h3>Bring your work in</h3><p>Import tasks and notes from your existing tools in one click.</p></li>
+          <li class="reveal"><span>3</span><h3>Get into flow</h3><p>Start a focus session and let Nocturne handle the rest.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>Ready to do your best work?</h2>
+          <p>Free forever for individuals. Team plans start at $8 per user/month.</p>
+          <form class="cta__form" id="signupForm">
+            <input type="email" id="email" placeholder="you@example.com" required aria-label="Email address" />
+            <button type="submit" class="btn btn--primary">Join now</button>
+          </form>
+          <p class="cta__msg" id="formMsg" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="logo"><span class="logo__mark"></span>Nocturne</a>
+      <nav>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </nav>
+      <p>© <span id="year"></span> Nocturne. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4bdf3966c5c1ad0',t:'MTc5MjIyNTkzMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
